@@ -159,9 +159,13 @@ app.use(
 
 /* HOME */
 
-res.sendFile(
-    path.resolve(__dirname, "../index.html")
-);
+app.get("/", (req, res) => {
+
+    res.sendFile(
+        path.resolve(__dirname, "../index.html")
+    );
+
+});
 
 /* TEST DATABASE */
 
