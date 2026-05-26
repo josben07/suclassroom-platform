@@ -159,6 +159,8 @@ app.use(
 
 /* HOME */
 
+app.use(express.static(path.resolve(__dirname, "..")));
+
 app.get("/", (req, res) => {
 
     res.sendFile(
