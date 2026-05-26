@@ -74,7 +74,7 @@ profileForm.addEventListener(
 
         const response =
             await fetch(
-                `http://localhost:3000/api/users/${user.id}`,
+                `/api/users/${user.id}`,
                 {
                     method: "PUT",
 
