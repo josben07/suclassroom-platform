@@ -13,7 +13,7 @@ async function loadMentorships() {
 
     const response =
         await fetch(
-            "http://localhost:3000/api/mentor"
+            "/api/mentor"
         );
 
     const sessions =
@@ -180,7 +180,7 @@ async function requestMentorship(
 
     await fetch(
 
-        `http://localhost:3000/api/mentor/request/${mentorshipId}`,
+        `/api/mentor/request/${mentorshipId}`,
 
         {
 
@@ -215,7 +215,7 @@ async function requestMentorship(
 async function cancelMentorship(mentorshipId) {
 
     await fetch(
-        `http://localhost:3000/api/mentor/cancel/${mentorshipId}`,
+        `/api/mentor/cancel/${mentorshipId}`,
         {
             method: "PUT"
         }
