@@ -47,6 +47,8 @@ require("express");
 const cors =
 require("cors");
 
+const path = require("path");
+
 require("dotenv").config();
 
 /* EXPRESS */
@@ -59,6 +61,8 @@ express();
 app.use(cors());
 
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, "../")));
 
 /* ROUTES */
 
@@ -155,14 +159,11 @@ app.use(
 
 /* HOME */
 
-app.get("/", (req,res) => {
+app.get("/", (req, res) => {
 
-    res.json({
-
-        message:
-        "SUClassroom backend funcionando 🚀"
-
-    });
+    res.sendFile(
+        path.join(__dirname, "../index.html")
+    );
 
 });
 
