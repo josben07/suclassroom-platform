@@ -30,7 +30,7 @@ let currentProjectId =
 async function loadMentorProjects() {
 
     const response =
-        await fetch("http://localhost:3000/api/projects");
+        await fetch("/api/projects");
 
     const projects =
         await response.json();
@@ -119,7 +119,7 @@ feedbackForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     await fetch(
-        `http://localhost:3000/api/projects/${currentProjectId}`,
+        `/api/projects/${currentProjectId}`,
         {
             method: "PUT",
 
