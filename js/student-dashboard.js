@@ -59,14 +59,14 @@ let studentFilter =
 async function loadStudentCourses() {
 
     const response =
-        await fetch("http://localhost:3000/api/courses");
+        await fetch("/api/courses");
 
     const courses =
         await response.json();
 
     const studentResponse =
         await fetch(
-            `http://localhost:3000/api/student-courses/${user.id}`
+            `/api/student-courses/${user.id}`
         );
 
     const studentCourses =
@@ -214,7 +214,7 @@ async function buyCourse(
     const response =
         await fetch(
 
-            "http://localhost:3000/api/student-courses/buy",
+            "/api/student-courses/buy",
 
             {
 
@@ -282,7 +282,7 @@ async function loadStudentStats() {
 
     const response =
         await fetch(
-            `http://localhost:3000/api/student/stats/${user.id}`
+            `/api/student/stats/${user.id}`
         );
 
     const stats =
