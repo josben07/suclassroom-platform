@@ -104,7 +104,7 @@ window.addEventListener(
 /* ========================= */
 
 async function loadCourses() {
-    const response = await fetch("http://localhost:3000/api/courses");
+    const response = await fetch("/api/courses");
     const courses = await response.json();
 
     grid.innerHTML = "";
@@ -189,7 +189,7 @@ function deleteCourse(id) {
 async function confirmDeleteCourse(id) {
 
     await fetch(
-        `http://localhost:3000/api/courses/${id}`,
+        `/api/courses/${id}`,
         {
             method: "DELETE"
         }
@@ -214,7 +214,7 @@ async function editCourse(id) {
 
     const response =
         await fetch(
-            "http://localhost:3000/api/courses"
+            "/api/courses"
         );
 
     const courses =
@@ -313,7 +313,7 @@ courseForm.addEventListener(
 
             await fetch(
 
-                `http://localhost:3000/api/courses/${editingCourseId}`,
+                `/api/courses/${editingCourseId}`,
 
                 {
 
@@ -344,7 +344,7 @@ courseForm.addEventListener(
 
             await fetch(
 
-                "http://localhost:3000/api/courses",
+                "/api/courses",
 
                 {
 
