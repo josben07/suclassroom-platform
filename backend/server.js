@@ -62,7 +62,7 @@ app.use(cors());
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "../")));
+app.use(express.static(path.resolve(__dirname, "..")));
 
 /* ROUTES */
 
@@ -160,7 +160,7 @@ app.use(
 /* HOME */
 
 res.sendFile(
-    path.join(__dirname, "../index.html")
+    path.resolve(__dirname, "../index.html")
 );
 
 /* TEST DATABASE */
